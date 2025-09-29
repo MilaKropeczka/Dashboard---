@@ -10,6 +10,7 @@ import {
 } from 'react-icons/fi';
 import { signOut } from 'next-auth/react';
 import { gradients } from '@/lib/colors';
+import { Toaster } from '@/components/Toaster/Toaster';
 
 export default function Home() {
 	const [collapsed, setCollapsed] = useState(false);
@@ -91,6 +92,7 @@ export default function Home() {
 					<div className='bg-white/60 shadow-xl rounded-3xl sm:col-span-2 sm:row-span-2'></div>
 				</div>
 			</div>
+			<Toaster />
 		</div>
 	);
 }

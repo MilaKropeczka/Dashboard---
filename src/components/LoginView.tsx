@@ -2,6 +2,7 @@
 import { signIn } from 'next-auth/react';
 import { useState } from 'react';
 import { gradients } from '@/lib/colors';
+import { DemoAccess } from './DemoAccess';
 
 export default function LoginPage() {
 	const [email, setEmail] = useState('');
@@ -26,6 +27,7 @@ export default function LoginPage() {
 	return (
 		<div
 			className={`w-full h-screen flex justify-center items-center bg-gradient-to-br ${gradients.background}`}>
+			<DemoAccess />
 			<div className='flex flex-col items-center bg-white/60 shadow-2xl rounded-3xl px-2 py-12 sm:px-10 m-2 w-104'>
 				<h2
 					className={`text-3xl font-bold bg-gradient-to-r ${gradients.headerText} bg-clip-text text-transparent pb-5`}>
