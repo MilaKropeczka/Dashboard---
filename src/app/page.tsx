@@ -30,6 +30,7 @@ export default function Home() {
 				callbackUrl: '/login',
 			});
 		} catch (err) {
+			console.log(err);
 			setLoggingOut(false);
 		}
 	}

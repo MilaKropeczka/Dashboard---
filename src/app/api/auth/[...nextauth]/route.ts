@@ -2,7 +2,7 @@ import NextAuth, { type AuthOptions } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import { users } from '@/lib/mockDb';
 
-export const authOptions: AuthOptions = {
+const authOptions: AuthOptions = {
 	providers: [
 		Credentials({
 			name: 'Credentials',

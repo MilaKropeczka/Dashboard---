@@ -15,6 +15,7 @@ export function DemoAccess() {
 			setTimeout(() => setCopiedEmail(false), 2000);
 			toast.success('Email copied to clipboard!');
 		} catch (err) {
+			console.log(err);
 			toast.error('Failed to copy email');
 		}
 	};
@@ -26,6 +27,7 @@ export function DemoAccess() {
 			setTimeout(() => setCopiedPassword(false), 2000);
 			toast.success('Password copied to clipboard!');
 		} catch (err) {
+			console.log(err);
 			toast.error('Failed to copy password');
 		}
 	};
