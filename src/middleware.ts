@@ -11,16 +11,24 @@ export async function middleware(request: NextRequest) {
 	const { pathname } = request.nextUrl;
 
 	if (token && pathname === '/login') {
-		return NextResponse.redirect(new URL('/', request.url));
+		return NextResponse.redirect(new URL('/dashboard', request.url));
 	}
 
-	if (!token && pathname !== '/login') {
+	if (!token && pathname.startsWith('/dashboard')) {
 		return NextResponse.redirect(new URL('/login', request.url));
+	}
+
+	if (pathname === '/') {
+		if (token) {
+			return NextResponse.redirect(new URL('/dashboard', request.url));
+		} else {
+			return NextResponse.redirect(new URL('/login', request.url));
+		}
 	}
 
 	return NextResponse.next();
 }
 
 export const config = {
-	matcher: ['/login', '/'],
+	matcher: ['/', '/login', '/dashboard/:path*'],
 };

@@ -17,7 +17,7 @@ export default function LoginPage() {
 				redirect: true,
 				email,
 				password,
-				callbackUrl: '/',
+				callbackUrl: '/dashboard',
 			});
 		} catch (err) {
 			setLoading(false);
