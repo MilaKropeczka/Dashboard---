@@ -102,9 +102,9 @@ export default function RootLayout({
 	}
 
 	return (
-		<>
+		<div className='flex w-full min-h-screen'>
 			<nav
-				className={`hidden md:flex flex-col justify-between transition-all duration-300 ${
+				className={`hidden md:flex flex-col justify-between sticky top-0 h-screen transition-all duration-300 mx-3 ${
 					collapsed ? 'w-16' : 'w-64'
 				}`}>
 				<div className='w-full flex flex-col'>
@@ -145,6 +145,8 @@ export default function RootLayout({
 					)}
 				</button>
 			</nav>
+
+			<main className='flex-1 overflow-auto'>{children}</main>
 
 			<nav className='md:hidden fixed bottom-0 left-0 right-0 bg-white z-50 flex justify-around'>
 				{bottomMenu.map((item, i) => {
@@ -223,10 +225,6 @@ export default function RootLayout({
 					})}
 				</div>
 			</motion.nav>
-
-			<main className='flex flex-col md:flex-row w-full gap-4'>
-				{children}
-			</main>
-		</>
+		</div>
 	);
 }

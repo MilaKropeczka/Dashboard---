@@ -10,7 +10,7 @@ export default function RootLayout({
 	return (
 		<html lang='pl'>
 			<body
-				className={`flex h-full min-h-screen gap-3 p-3 bg-gradient-to-br ${gradients.background}`}>
+				className={`flex h-full min-h-screen bg-gradient-to-br ${gradients.background}`}>
 				{children}
 			</body>
 		</html>
