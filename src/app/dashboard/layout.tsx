@@ -103,11 +103,12 @@ export default function RootLayout({
 							<button
 								key={i}
 								className={`flex gap-2 p-3 w-full rounded-lg cursor-pointer transition
-        ${
-			isActive
-				? `bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold shadow-lg hover:opacity-90 active:scale-95`
-				: 'hover:text-gray-700'
-		}`}
+    ${collapsed && 'justify-center'}
+    ${
+		isActive
+			? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold shadow-lg hover:opacity-90 active:scale-95'
+			: 'hover:text-gray-700'
+	}`}
 								onClick={() => router.push(item.path)}>
 								{item.icon}
 								{!collapsed && <span>{item.label}</span>}
