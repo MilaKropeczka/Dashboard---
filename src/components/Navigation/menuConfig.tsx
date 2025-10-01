@@ -7,6 +7,7 @@ import {
 	FiList,
 	FiLogOut,
 } from 'react-icons/fi';
+import { signOut } from 'next-auth/react';
 
 export const bottomMenu = [
 	{
@@ -50,6 +51,8 @@ export const sideMenu = [
 			/>
 		),
 		label: 'Logout',
-		action: 'logout',
+		action: async () => {
+			await signOut({ redirect: true, callbackUrl: '/login' });
+		},
 	},
 ];
