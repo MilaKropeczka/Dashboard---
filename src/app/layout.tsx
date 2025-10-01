@@ -1,6 +1,6 @@
-'use client';
 import './globals.css';
-import { gradients } from '@/lib/colors';
+import { Toaster } from '@/components/Toaster/Toaster';
+import { ThemeButton } from '@/components/ThemeButton';
 
 export default function RootLayout({
 	children,
@@ -9,9 +9,10 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang='pl'>
-			<body
-				className={`flex h-full min-h-screen bg-gradient-to-br ${gradients.background}`}>
+			<body className='flex h-full min-h-screen bg-gradient-to-br from-violet-200 via-pink-200 to-violet-300 dark:bg-none dark:bg-gray-800'>
 				{children}
+				<Toaster />
+				<ThemeButton />
 			</body>
 		</html>
 	);

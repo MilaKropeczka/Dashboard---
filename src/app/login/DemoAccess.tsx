@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { Copy, Check, X } from 'lucide-react';
 import { toast } from '@/hooks/useToaster';
@@ -41,15 +42,18 @@ export function DemoAccess() {
 					exit={{ opacity: 0, x: 100 }}
 					transition={{ duration: 0.3 }}
 					className='fixed top-4 right-4 z-50 max-w-sm w-80'>
-					<div className='bg-gradient-to-r from-violet-50 to-pink-50 border border-violet-200 rounded-xl shadow-lg p-4 relative'>
+					<div className='bg-gradient-to-r from-violet-50 to-pink-50 dark:bg-none dark:bg-gray-700/80 border border-violet-200 dark:border-gray-600 rounded-xl shadow-lg p-4 relative transition-colors duration-300'>
 						<button
 							onClick={() => setIsOpen(false)}
-							className='absolute top-2 right-2 p-1 hover:bg-violet-100 rounded-full transition-colors duration-200 cursor-pointer'
+							className='absolute top-2 right-2 p-1 hover:bg-violet-100 dark:hover:bg-gray-700 rounded-full transition-colors duration-200 cursor-pointer'
 							title='Close'>
-							<X size={16} className='text-violet-600' />
+							<X
+								size={16}
+								className='text-violet-600 dark:text-white/80'
+							/>
 						</button>
 
-						<h3 className='font-semibold text-violet-900 text-center mb-3 flex items-center justify-center pr-6'>
+						<h3 className='font-semibold text-violet-900 dark:text-white/90 text-center mb-3 flex items-center justify-center pr-6'>
 							<svg
 								className='w-4 h-4 mr-2'
 								fill='currentColor'
@@ -64,19 +68,19 @@ export function DemoAccess() {
 						</h3>
 
 						<div className='space-y-2'>
-							<div className='flex items-center justify-between p-2 bg-white rounded-lg border border-violet-100'>
+							<div className='flex items-center justify-between p-2 bg-white dark:bg-gray-600/50 rounded-lg border border-violet-100 dark:border-gray-600 transition-colors duration-300'>
 								<div className='flex-1'>
-									<p className='text-xs text-gray-500'>
+									<p className='text-xs text-gray-500 dark:text-gray-300'>
 										Email
 									</p>
-									<p className='text-sm font-medium text-violet-800'>
+									<p className='text-sm font-medium text-violet-800 dark:text-white/90'>
 										test@test.pl
 									</p>
 								</div>
 								<button
 									onClick={copyEmail}
 									type='button'
-									className='ml-3 p-2 bg-violet-100 hover:bg-violet-200 rounded-lg transition-colors duration-200 cursor-pointer'
+									className='ml-3 p-2 bg-violet-100 dark:bg-gray-600 hover:bg-violet-200 dark:hover:bg-gray-500 rounded-lg transition-colors duration-200 cursor-pointer'
 									title='Copy email'>
 									{copiedEmail ? (
 										<Check
@@ -86,25 +90,25 @@ export function DemoAccess() {
 									) : (
 										<Copy
 											size={16}
-											className='text-violet-600'
+											className='text-violet-600 dark:text-white/80'
 										/>
 									)}
 								</button>
 							</div>
 
-							<div className='flex items-center justify-between p-2 bg-white rounded-lg border border-violet-100'>
+							<div className='flex items-center justify-between p-2 bg-white dark:bg-gray-600/50 rounded-lg border border-violet-100 dark:border-gray-600 transition-colors duration-300'>
 								<div className='flex-1'>
-									<p className='text-xs text-gray-500'>
+									<p className='text-xs text-gray-500 dark:text-gray-300'>
 										Password
 									</p>
-									<p className='text-sm font-medium text-violet-800'>
+									<p className='text-sm font-medium text-violet-800 dark:text-white/90'>
 										testpassword123456
 									</p>
 								</div>
 								<button
 									onClick={copyPassword}
 									type='button'
-									className='ml-3 p-2 bg-violet-100 hover:bg-violet-200 rounded-lg transition-colors duration-200 cursor-pointer'
+									className='ml-3 p-2 bg-violet-100 dark:bg-gray-600 hover:bg-violet-200 dark:hover:bg-gray-500 rounded-lg transition-colors duration-200 cursor-pointer'
 									title='Copy password'>
 									{copiedPassword ? (
 										<Check
@@ -114,14 +118,14 @@ export function DemoAccess() {
 									) : (
 										<Copy
 											size={16}
-											className='text-violet-600'
+											className='text-violet-600 dark:text-white/80'
 										/>
 									)}
 								</button>
 							</div>
 						</div>
 
-						<p className='text-xs text-violet-600 text-center mt-3'>
+						<p className='text-xs text-violet-600 dark:text-gray-300 text-center mt-3'>
 							Use these credentials to test the login
 							functionality
 						</p>
