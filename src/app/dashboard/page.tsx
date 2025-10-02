@@ -8,7 +8,6 @@ const data = [
 	{ name: 'Apr', Income: 2780, Expenses: 3908 },
 	{ name: 'May', Income: 1890, Expenses: 4800 },
 	{ name: 'Jun', Income: 2390, Expenses: 3800 },
-	{ name: 'Jul', Income: 3490, Expenses: 4300 },
 ];
 
 export default function Home() {
