@@ -2,12 +2,18 @@
 import Chart from '@/components/Chart';
 
 const data = [
-	{ name: 'Jan', Income: 4000, Expenses: 2400 },
-	{ name: 'Feb', Income: 3000, Expenses: 1398 },
-	{ name: 'Mar', Income: 2000, Expenses: 6800 },
-	{ name: 'Apr', Income: 2780, Expenses: 3908 },
-	{ name: 'May', Income: 1890, Expenses: 4800 },
-	{ name: 'Jun', Income: 2390, Expenses: 3800 },
+	{ name: 'Jan', Income: 4200, Expenses: 2800 },
+	{ name: 'Feb', Income: 3800, Expenses: 3200 },
+	{ name: 'Mar', Income: 5100, Expenses: 4100 },
+	{ name: 'Apr', Income: 2900, Expenses: 1900 },
+	{ name: 'May', Income: 4500, Expenses: 3700 },
+	{ name: 'Jun', Income: 5200, Expenses: 4300 },
+	{ name: 'Jul', Income: 4800, Expenses: 3500 },
+	{ name: 'Aug', Income: 4100, Expenses: 3100 },
+	{ name: 'Sep', Income: 3900, Expenses: 2900 },
+	{ name: 'Oct', Income: 4700, Expenses: 3600 },
+	{ name: 'Nov', Income: 4300, Expenses: 3300 },
+	{ name: 'Dec', Income: 5900, Expenses: 4800 },
 ];
 
 export default function Home() {

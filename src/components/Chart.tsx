@@ -30,7 +30,8 @@ export default function Chart({ data }: Props) {
 			const width = window.innerWidth;
 			if (width < 359) setFilteredData(data.slice(0, 3));
 			else if (width < 400) setFilteredData(data.slice(0, 4));
-			else setFilteredData(data);
+			else if (width < 1200) setFilteredData(data.slice(0, 6));
+			else setFilteredData(data.slice(0, 8));
 		};
 
 		updateData();
@@ -40,7 +41,7 @@ export default function Chart({ data }: Props) {
 
 	return (
 		<ResponsiveContainer width='100%' height='100%'>
-			<BarChart data={filteredData} barSize={35} barGap={2}>
+			<BarChart data={filteredData} barSize={30} barGap={2}>
 				<linearGradient id='incomeGradient' x1='0' y1='0' x2='0' y2='1'>
 					<stop offset='100%' stopColor='#8b5cf6' stopOpacity={0.9} />
 					<stop offset='100%' stopColor='#c4b5fd' stopOpacity={0.9} />
