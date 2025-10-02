@@ -11,10 +11,10 @@ export const ThemeButton = () => {
 		<div className='fixed top-0 right-0 z-30 p-3'>
 			<button
 				onClick={toggleTheme}
-				className='relative w-14 h-7 rounded-full shadow-xl bg-white/95 dark:bg-gray-600 transition-colors duration-300 flex items-center cursor-pointer p-1 m-3'>
+				className='relative w-18 h-9 md:w-14 md:h-7 rounded-full shadow-xl bg-white/95 dark:bg-gray-600 transition-colors duration-300 flex items-center cursor-pointer p-1 m-3'>
 				<motion.div
-					className='absolute size-5 bg-gray-400 rounded-full flex items-center justify-center'
-					animate={{ x: isDark ? 28 : 0 }}
+					className='absolute size-7 md:size-5 bg-gray-400 rounded-full flex items-center justify-center'
+					animate={{ x: isDark ? 'calc(100% + 8px)' : 0 }}
 					transition={{
 						type: 'spring',
 						stiffness: 500,
