@@ -1,5 +1,6 @@
 'use client';
 import Chart from '@/components/Chart';
+import SavingGoal from '@/components/SavingsGoal';
 
 const data = [
 	{ name: 'Jan', Income: 4200, Expenses: 2800 },
@@ -27,7 +28,10 @@ export default function Home() {
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl'></div>
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl'></div>
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:col-span-2 sm:row-span-2'></div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:col-span-2 sm:row-span-2'></div>
+			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:row-span-2'></div>
+			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:row-span-2'>
+				<SavingGoal />
+			</div>
 		</div>
 	);
 }
