@@ -1,11 +1,19 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { Sun, Moon } from 'lucide-react';
-import useTheme from '@/lib/useTheme';
 import { motion } from 'framer-motion';
+import useTheme from '@/hooks/useTheme';
 
 export const ThemeButton = () => {
 	const { isDark, toggleTheme } = useTheme();
+	const [mounted, setMounted] = useState(false);
+
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+	if (!mounted) return null;
 
 	return (
 		<div className='fixed top-0 right-0 z-30 p-3'>

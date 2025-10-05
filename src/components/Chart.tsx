@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import useTheme from '@/lib/useTheme';
+import useTheme from '@/hooks/useTheme';
 import {
 	XAxis,
 	LabelList,
