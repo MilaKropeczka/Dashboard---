@@ -1,5 +1,6 @@
 'use client';
 import Chart from '@/components/Chart';
+import RecentTransactions from '@/components/RecentTransactions';
 import SavingGoal from '@/components/SavingsGoal';
 
 const data = [
@@ -27,9 +28,11 @@ export default function Home() {
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl'></div>
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl'></div>
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl'></div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:col-span-2 sm:row-span-2'></div>
+			<div className='rounded-3xl sm:col-span-2 row-span-2'>
+				<RecentTransactions />
+			</div>
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:row-span-2'></div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:row-span-2'>
+			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl row-span-2'>
 				<SavingGoal />
 			</div>
 		</div>
