@@ -36,8 +36,8 @@ export default function RecentTransactions() {
 	];
 
 	return (
-		<div className='flex flex-col w-full h-full gap-3'>
-			<div className='flex items-center justify-between'>
+		<div className='flex flex-col w-full h-full'>
+			<div className='flex items-center justify-between mb-2'>
 				<h2 className='text-lg font-semibold text-gray-800 dark:text-gray-100'>
 					Recent Transactions
 				</h2>
@@ -48,14 +48,14 @@ export default function RecentTransactions() {
 				</Link>
 			</div>
 
-			<div className='flex flex-col gap-3'>
+			<div className='flex flex-col gap-3 flex-1'>
 				{transactions.map((transaction) => (
 					<motion.div
 						key={transaction.id}
 						initial={{ opacity: 0, y: 15 }}
 						animate={{ opacity: 1, y: 0 }}
 						transition={{ duration: 0.3 }}
-						className='flex items-center justify-between p-3 rounded-2xl bg-white/60 dark:bg-gray-700/90 shadow-xl dark:shadow-xl/20'>
+						className='flex flex-1 items-center justify-between p-3 rounded-2xl bg-white/60 dark:bg-gray-700/90 shadow-xl dark:shadow-xl/20'>
 						<div className='flex items-center gap-3'>
 							<div
 								className={`p-2 rounded-full ${
@@ -64,9 +64,9 @@ export default function RecentTransactions() {
 										: 'bg-gray-300 dark:bg-gray-600'
 								}`}>
 								{transaction.type === 'income' ? (
-									<ArrowUpRight className='text-white size-4' />
+									<ArrowUpRight className='text-white w-4 h-4' />
 								) : (
-									<ArrowDownRight className='text-gray-800 dark:text-gray-100 size-4' />
+									<ArrowDownRight className='text-gray-800 dark:text-gray-100 w-4 h-4' />
 								)}
 							</div>
 							<div className='flex flex-col'>
