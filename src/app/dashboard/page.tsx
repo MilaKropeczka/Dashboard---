@@ -23,7 +23,7 @@ const data = [
 
 export default function Home() {
 	return (
-		<div className='p-3 pb-22 sm:pb-0 grid gap-6 w-full h-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[150px]'>
+		<div className='p-3 pb-22 md:pb-0 grid gap-6 w-full h-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[150px]'>
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:col-span-2 row-span-2 flex items-center justify-center p-4'>
 				<Chart data={data} />
 			</div>

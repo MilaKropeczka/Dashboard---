@@ -83,7 +83,7 @@ export default function BalanceCard() {
 
 				<div className='flex flex-col gap-1 w-1/2 p-3 rounded-lg bg-white/50 dark:bg-gray-800/35'>
 					<div className='flex items-center gap-2'>
-						<ArrowDown className='w-5 h-5 text-pink-500' />
+						<ArrowDown className='size-5 text-pink-500' />
 						<p className='text-sm font-medium text-pink-400 dark:text-pink-300'>
 							Expenses
 						</p>
