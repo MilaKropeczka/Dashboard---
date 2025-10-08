@@ -44,7 +44,7 @@ export default function RecentTransactions() {
 				<Link
 					href='#'
 					className='text-sm text-violet-600 dark:text-pink-400 hover:underline'>
-					Więcej
+					More
 				</Link>
 			</div>
 

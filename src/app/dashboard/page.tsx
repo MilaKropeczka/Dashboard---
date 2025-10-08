@@ -25,11 +25,11 @@ const data = [
 
 export default function Home() {
 	return (
-		<div className='grid gap-6 w-full h-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[150px] p-3'>
+		<div className='pb-22 sm:pb-0 grid gap-6 w-full h-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[150px] p-3'>
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:col-span-2 row-span-2 flex items-center justify-center p-4'>
 				<Chart data={data} />
 			</div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl sm:row-span-2'>
+			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl row-span-2'>
 				<AccountActivity />
 			</div>
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl row-span-2'>
@@ -38,7 +38,7 @@ export default function Home() {
 			<div className='rounded-3xl sm:col-span-2 row-span-2'>
 				<RecentTransactions />
 			</div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl sm:row-span-2'>
+			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl row-span-2'>
 				<SavingGoal />
 			</div>
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl'>
