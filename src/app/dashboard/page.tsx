@@ -2,6 +2,11 @@
 import Chart from '@/components/Chart';
 import RecentTransactions from '@/components/RecentTransactions';
 import SavingGoal from '@/components/SavingsGoal';
+import StatCard from '@/components/StatCard';
+import BudgetOverview from '@/components/BudgetOverview';
+import { Wallet } from 'lucide-react';
+import AccountActivity from '@/components/AccountActivity';
+import OverviewCard from '@/components/OverviewCart';
 
 const data = [
 	{ name: 'Jan', Income: 4200, Expenses: 2800 },
@@ -24,16 +29,23 @@ export default function Home() {
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:col-span-2 row-span-2 flex items-center justify-center p-4'>
 				<Chart data={data} />
 			</div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl'></div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl'></div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl'></div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl'></div>
+			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl sm:row-span-2'>
+				<AccountActivity />
+			</div>
+			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl row-span-2'>
+				<BudgetOverview />
+			</div>
 			<div className='rounded-3xl sm:col-span-2 row-span-2'>
 				<RecentTransactions />
 			</div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:row-span-2'></div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl row-span-2'>
+			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl sm:row-span-2'>
 				<SavingGoal />
+			</div>
+			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl'>
+				<StatCard title='Total Balance' value='$7,300' icon={Wallet} />
+			</div>
+			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl'>
+				<OverviewCard income='$4,700' expenses='$3,600' />
 			</div>
 		</div>
 	);
