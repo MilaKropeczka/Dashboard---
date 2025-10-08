@@ -2,11 +2,9 @@
 import Chart from '@/components/Chart';
 import RecentTransactions from '@/components/RecentTransactions';
 import SavingGoal from '@/components/SavingsGoal';
-import StatCard from '@/components/StatCard';
+import StatCard from '@/components/BalanceCard';
 import BudgetOverview from '@/components/BudgetOverview';
-import { Wallet } from 'lucide-react';
 import AccountActivity from '@/components/AccountActivity';
-import OverviewCard from '@/components/OverviewCart';
 
 const data = [
 	{ name: 'Jan', Income: 4200, Expenses: 2800 },
@@ -25,7 +23,7 @@ const data = [
 
 export default function Home() {
 	return (
-		<div className='pb-22 sm:pb-0 grid gap-6 w-full h-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[150px] p-3'>
+		<div className='p-3 pb-22 sm:pb-0 grid gap-6 w-full h-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 auto-rows-[150px]'>
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl rounded-3xl sm:col-span-2 row-span-2 flex items-center justify-center p-4'>
 				<Chart data={data} />
 			</div>
@@ -41,11 +39,8 @@ export default function Home() {
 			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl row-span-2'>
 				<SavingGoal />
 			</div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl'>
-				<StatCard title='Total Balance' value='$7,300' icon={Wallet} />
-			</div>
-			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl'>
-				<OverviewCard income='$4,700' expenses='$3,600' />
+			<div className='bg-white/60 dark:bg-gray-700/95 shadow-xl dark:shadow-xl/20 rounded-3xl row-span-2'>
+				<StatCard />
 			</div>
 		</div>
 	);

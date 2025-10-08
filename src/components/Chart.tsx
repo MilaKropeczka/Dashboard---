@@ -56,11 +56,7 @@ export default function Chart({ data }: Props) {
 					<stop offset='100%' stopColor='#f9a8d4' stopOpacity={0.9} />
 				</linearGradient>
 
-				<CartesianGrid
-					strokeDasharray='3 3'
-					strokeOpacity={0.2}
-					className='stroke-black/40 dark:stroke-white/40'
-				/>
+				<CartesianGrid strokeOpacity={0} />
 				<XAxis
 					dataKey='name'
 					axisLine={false}
