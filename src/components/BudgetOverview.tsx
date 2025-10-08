@@ -10,12 +10,12 @@ export default function BudgetOverview() {
 	];
 
 	return (
-		<div className='flex flex-col w-full h-full justify-center p-6 gap-4'>
-			<h2 className='text-lg font-semibold text-gray-800 dark:text-gray-100'>
+		<div className='flex flex-col w-full h-full justify-between p-6 gap-4'>
+			<h2 className='text-lg font-semibold text-gray-800 dark:text-gray-100 mb-2'>
 				Budget Overview
 			</h2>
 
-			<div className='flex flex-col gap-3'>
+			<div className='flex-1 flex flex-col gap-3 '>
 				{budgets.map((item, index) => {
 					const percent = Math.min(
 						Math.round((item.spent / item.limit) * 100),
