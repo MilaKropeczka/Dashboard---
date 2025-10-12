@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { signIn } from 'next-auth/react';
+import Link from 'next/link';
 
 export function LoginForm() {
 	const [email, setEmail] = useState('');
@@ -24,7 +25,7 @@ export function LoginForm() {
 	}
 
 	return (
-		<div className='flex flex-col items-center bg-white/60 dark:bg-gray-700/95 shadow-2xl rounded-3xl px-2 py-12 sm:px-10 m-2 w-104'>
+		<div className='flex flex-col items-center bg-white/60 dark:bg-gray-700/95 shadow-2xl rounded-3xl px-2 py-10 sm:px-10 m-2 w-104'>
 			<h2 className='text-3xl font-bold bg-gradient-to-r from-violet-600 to-pink-500 dark:from-violet-500/90 dark:to-pink-500/90  bg-clip-text text-transparent pb-5'>
 				Sign in
 			</h2>
@@ -52,6 +53,11 @@ export function LoginForm() {
 					{loading ? 'Logging in...' : 'Log in'}
 				</button>
 			</form>
+			<Link
+				className='text-center dark:text-white/70 font-light pt-2'
+				href={'/register'}>
+				Sign up now
+			</Link>
 		</div>
 	);
 }

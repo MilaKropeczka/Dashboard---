@@ -41,7 +41,7 @@ export default function Chart({ data }: Props) {
 
 	return (
 		<ResponsiveContainer width='100%' height='100%'>
-			<BarChart data={filteredData} barSize={30} barGap={2}>
+			<BarChart data={filteredData} barSize={25} barGap={2}>
 				<linearGradient id='incomeGradient' x1='0' y1='0' x2='0' y2='1'>
 					<stop offset='100%' stopColor='#8b5cf6' stopOpacity={0.9} />
 					<stop offset='100%' stopColor='#c4b5fd' stopOpacity={0.9} />
