@@ -17,7 +17,7 @@ export default function BottomNav() {
 
 	return (
 		<>
-			<nav className='md:hidden fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-900 dark:text-white/95 z-50 flex justify-around'>
+			<nav className='md:hidden flex justify-around bg-white dark:bg-gray-900 border-t border-gray-300 dark:border-gray-700 dark:text-white/95'>
 				{bottomMenu.map((item, i) => {
 					const isActive = pathname === item.path;
 					return (
