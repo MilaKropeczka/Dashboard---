@@ -1,3 +1,6 @@
+## **Dashboard** [![My Skills](https://skillicons.dev/icons?i=react,ts,redux,tailwind,next,)](https://skillicons.dev)
+ ![enter image description here](./54.png)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
